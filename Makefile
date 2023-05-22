@@ -1,0 +1,9 @@
+BIN_DIRNAME ?= bin
+APP_DIRNAME ?= app
+MAIN_FILENAME ?= main
+
+build:
+	go build -o $(BIN_DIRNAME)/$(APP_DIRNAME) cmd/$(APP_DIRNAME)/$(MAIN_FILENAME).go
+
+run: build
+	$(BIN_DIRNAME)/$(APP_DIRNAME)/$(MAIN_FILENAME)
